@@ -23,6 +23,19 @@ public class Empleado extends Persona {
         cargo = JOptionPane.showInputDialog("Ingrese el cargo");
     }
 
+    @Override
+    public void imprimirDatosPersona(String datos) {
+        super.imprimirDatosPersona(datos);
+
+        datos = "Codigo de empleado: " + codigoDeEmpleado + "\n";
+        datos += "Numero de horas extras: " + numeroDeHorasExtras + "\n";
+        datos += "Fecha de ingreso: " + fechaDeIngreso + "\n";
+        datos += "Area: " + area + "\n";
+        datos += "Cargo: " + cargo + "\n";
+
+        System.out.println(datos);
+    }
+
     public String getCodigoDeEmpleado() {
         return codigoDeEmpleado;
     }

@@ -15,6 +15,16 @@ public class EmpleadoEventual extends Empleado{
         fechaTerminoContrato = JOptionPane.showInputDialog("Ingrese fecha de termino contrato (dd/mm/aaaa)");
     }
 
+    @Override
+    public void imprimirDatosPersona(String datos) {
+        super.imprimirDatosPersona(datos);
+
+        datos += "Honorarios por Hora: " + honorariosPorHora + "\n";
+        datos += "Fecha termino del contrato: " + fechaTerminoContrato + "\n";
+
+        System.out.println(datos);
+
+    }
     public double getHonorariosPorHora() {
         return honorariosPorHora;
     }
